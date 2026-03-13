@@ -4,7 +4,7 @@ import streamlit as st
 import pandas as pd
 
 from sql_generator import generate_sql
-from backend.query_tools import explain_query
+from query_tools import explain_query
 def generate_sql_query(user_query):
 
     if "top" in user_query.lower():
