@@ -3,7 +3,7 @@ import speech_recognition as sr
 import streamlit as st
 import pandas as pd
 
-from backend.sql_generator import generate_sql
+from sql_generator import generate_sql
 from backend.query_tools import explain_query
 def generate_sql_query(user_query):
 
