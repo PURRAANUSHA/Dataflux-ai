@@ -1,0 +1,8 @@
+Product,Category,Sales,Profit,Region
+Laptop,Electronics,1200,300,North
+Mouse,Electronics,50,15,South
+Chair,Furniture,200,40,East
+Desk,Furniture,450,90,West
+Phone,Electronics,800,200,North
+Keyboard,Electronics,100,25,South
+Sofa,Furniture,1000,150,East

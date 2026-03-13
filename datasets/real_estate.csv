@@ -1,0 +1,11 @@
+PropertyID,Type,City,Neighborhood,Bedrooms,Bathrooms,Area_sqft,Price,BuiltYear,Status
+R001,House,New York,Queens,3,2,1500,750000,1995,Sold
+R002,Apartment,New York,Manhattan,2,1.5,900,1200000,2010,Active
+R003,Condo,Los Angeles,Downtown,1,1,750,550000,2018,Active
+R004,House,Los Angeles,Beverly Hills,5,4,4000,3500000,2005,Sold
+R005,Townhouse,Chicago,Lincoln Park,3,2.5,2000,850000,2000,Active
+R006,Apartment,Chicago,The Loop,2,2,1100,600000,2015,Pending
+R007,House,Houston,Sugar Land,4,3,2800,450000,2012,Sold
+R008,Condo,Houston,Midtown,2,2,1000,320000,2020,Active
+R009,House,Phoenix,Scottsdale,4,2,2200,600000,1998,Pending
+R010,Apartment,Phoenix,Downtown,1,1,650,250000,2019,Active
