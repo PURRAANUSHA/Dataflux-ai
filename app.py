@@ -39,16 +39,18 @@ def generate_sql_query(user_query):
     else:
         return "SELECT * FROM dataset;"
 def voice_to_text():
-    r = sr.Recognizer()
-    with sr.Microphone() as source:
-        st.info("Listening... Speak now")
-        audio = r.listen(source)
-
     try:
+        r = sr.Recognizer()
+        with sr.Microphone() as source:
+            st.info("Listening... Speak now")
+            audio = r.listen(source)
+
         text = r.recognize_google(audio)
         return text
-    except:
-        return "Could not understand audio"
+
+    except Exception:
+        st.warning("Voice input is not supported on deployed apps. Please type your query instead.")
+        return ""
 
 # Page configuration
 st.set_page_config(page_title="DATAFLUX", layout="centered")
@@ -63,9 +65,10 @@ if "page" not in st.session_state:
 
 if st.session_state.page == "home":
 
-    st.title("DATAFLUX")
-    st.subheader("Extract Insights From Data")
-
+    st.markdown("<div class='brand-wrap'>", unsafe_allow_html=True)
+    st.markdown("<div class='brand-title'>DATAFLUX</div>", unsafe_allow_html=True)
+    st.markdown("<div class='brand-tagline'>Extract Insights From Data</div>", unsafe_allow_html=True)
+    st.markdown("</div>", unsafe_allow_html=True)
     col1, col2 = st.columns(2)
 
     with col1:
@@ -81,7 +84,7 @@ if st.session_state.page == "home":
 
 if st.session_state.page == "voice":
 
-    st.title("🎤 Voice to SQL")
+    st.markdown("<div class='section-header'>🎤 Voice to SQL</div>", unsafe_allow_html=True)
 
     st.write("Speak or type your query")
 
@@ -123,7 +126,7 @@ if st.session_state.page == "voice":
 
 if st.session_state.page == "upload":
 
-    st.title("📂 Upload Dataset")
+    st.markdown("<div class='section-header'>📂 Upload Dataset</div>", unsafe_allow_html=True)
 
     file = st.file_uploader("Upload Dataset", type=["csv","xls","xlsx"])
 
