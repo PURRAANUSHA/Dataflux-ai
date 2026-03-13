@@ -2,6 +2,13 @@ from transformers import pipeline
 import speech_recognition as sr
 import streamlit as st
 import pandas as pd
+import os
+
+def load_css():
+    css_file = os.path.join(os.path.dirname(__file__), "styles.css")
+    if os.path.exists(css_file):
+        with open(css_file) as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 from sql_generator import generate_sql
 from query_tools import explain_query
@@ -45,6 +52,7 @@ def voice_to_text():
 
 # Page configuration
 st.set_page_config(page_title="DATAFLUX", layout="centered")
+load_css()
 
 # Initialize page state
 if "page" not in st.session_state:
